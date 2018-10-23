@@ -14,3 +14,79 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+// automatically applied to the <body> element in the app.
+.menu-class .bg_img {
+    background: url(../assets/imgs/menu/sidemenu_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+ion-menu{
+    // width: 80%;
+}
+// .menu-class .menu-content{
+//     transform: translateX(255px) !important;
+
+// }
+
+.md .menu-content-push{
+    // transform: translateX(255px) !important;
+
+}
+.menu-class .menu-head img {
+    width: 26%;
+    border: 2px solid #f17f37;
+    border-radius: 150px;
+}
+
+.menu-class .menu-head {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.menu-class .menu-head h2 {
+    font-weight: 400;
+    color:#fff;
+}
+
+.menu-class .menu-head p {
+    margin-top: -10px;
+    font-weight: 200;
+    color:#fff;
+}
+
+.menu-class ion-list button {
+    background: transparent;
+    text-align: center;
+    height: 39px;
+    min-height: 35px;
+    color:#fff;
+}
+
+.menu-class ion-list button .item-inner {
+    border: none !important;
+}
+
+.menu-class ion-list button .item-inner ion-label {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.menu-class .menu-bottom {
+    width: 60%;
+}
+
+.imageRowMenu{
+    width: 100%;
+    justify-content: center;
+    height: 30%;
+    align-items: flex-end;
+}
+.menu-class {
+    text-align: center;
+}
+
+.menu-content-open{
+    // transform: translateX(255px) !important;
+}

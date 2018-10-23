@@ -1,18 +1,92 @@
-<ion-header>
+<ion-header class="home-head">
   <ion-navbar>
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <img class="img-menu" src="assets/imgs/home/menu.png"/>
     </button>
     <ion-title>Home</ion-title>
+    <button ion-button menuToggle class="btn-search">
+      <img class="img-search" src="assets/imgs/home/search.png"/>
+    </button>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content padding class="bg-img">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 class="col-custom" (click)="gotoOrder()">
+          <div class="notification-div">2</div>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+        <ion-row class="icon-row">
+            <img src="assets/imgs/home/gardening.png" />
+        </ion-row>
+       <ion-row class="icon-text-row">
+          GARDENING
+       </ion-row> 
+       <!-- <p>GARDENING</p> -->
+      </ion-col>
+      <ion-col col-6 class="col-custom">
+          <div class="notification-div">2</div>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+          <ion-row class="icon-row">
+              <img src="assets/imgs/home/painting.png" />
+          </ion-row>
+         <ion-row class="icon-text-row">
+            PAINTING
+         </ion-row>
+        <!-- <img src="assets/imgs/home/painting.png" />
+        <p>PAINTING</p> -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 class="col-custom">
+        <!-- <img src="assets/imgs/home/pluming.png" />
+        <p>PLUMBING</p> -->
+        <div class="notification-div">2</div>
+
+        <ion-row class="icon-row">
+            <img src="assets/imgs/home/pluming.png" />
+        </ion-row>
+       <ion-row class="icon-text-row">
+          PLUMBING
+       </ion-row>
+      </ion-col>
+      <ion-col col-6 class="col-custom">
+        <div class="notification-div">2</div>
+          <ion-row class="icon-row">
+              <img src="assets/imgs/home/electrician.png" />
+          </ion-row>
+         <ion-row class="icon-text-row">
+            ELECTRICIAN
+         </ion-row>
+        <!-- <img src="assets/imgs/home/electrician.png" />
+        <p>ELECTRICIAN</p> -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 class="col-custom">
+          <div class="notification-div">22</div>
+
+          <ion-row class="icon-row">
+              <img src="assets/imgs/home/carwash.png" />
+          </ion-row>
+         <ion-row class="icon-text-row">
+            CAR WASH
+         </ion-row>
+        <!-- <img src="assets/imgs/home/carwash.png" />
+        <p>CAR WASH</p> -->
+      </ion-col>
+      <ion-col col-6 class="col-custom">
+          <div class="notification-div">2</div>
+
+          <ion-row class="icon-row">
+              <img src="assets/imgs/home/house_cleaning.png" />
+          </ion-row>
+         <ion-row class="icon-text-row">
+            HOUSE CLEANING
+         </ion-row>
+        <!-- <img src="assets/imgs/home/house_cleaning.png" />
+        <p>HOUSE CLEANING</p> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

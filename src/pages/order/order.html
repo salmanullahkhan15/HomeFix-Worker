@@ -1,0 +1,78 @@
+<!--
+  Generated template for the OrderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="order-head">
+
+    <img scr="assets/imgs/order/left_arrow.png">
+    <!-- <ion-navbar> -->
+    <ion-title>Order Details</ion-title>
+    <!-- </ion-navbar> -->
+  </ion-header>
+  
+  
+  <ion-content class="order-content">
+    <img src="assets/imgs/order/cover_picture.png">
+  
+    <div class="head-cont">
+      <img src="assets/imgs/order/gardening_service_icon.png">
+      <h1>Gardening</h1>
+      <p>Your Order No.
+        <span>456789</span>
+      </p>
+    </div>
+  
+    <ion-row class="form-cont">
+      <ion-col col-3 no-padding>
+
+        <ion-row class="calender-icon-row">
+            <ion-icon class="mdIcons" ios="ios-calendar" name="md-calendar"></ion-icon>
+        </ion-row>
+        <ion-row class="dateAndTime">
+         <span class="dateonly">18 March </span> 2018 <br> 05:00 PM
+        </ion-row>
+      </ion-col>
+      <ion-col col-6 no-padding>
+        <ion-row class="maintain-service">Maintenence Service</ion-row>
+        <ion-row class="customer-name">Muhammad Faizan Shaikh</ion-row>
+        <ion-row class="call-details">
+          <ion-col col-2 no-padding>
+              <ion-icon class="mdIcons" name="md-call"></ion-icon>
+          </ion-col>
+          <ion-col class="customer-number" col-10 no-padding>
+             (000080) 34555 4555321
+            </ion-col>
+        </ion-row>
+        <ion-row class="call-details">
+            <ion-col col-2 no-padding>
+                <ion-icon class="mdIcons" name="md-globe"></ion-icon>
+            </ion-col>
+            <ion-col class="customer-number" col-10 no-padding>
+              A 345 Suit Business Avenue 
+              </ion-col>
+          </ion-row>
+
+      </ion-col>
+      <ion-col col-3 no-padding>
+
+      </ion-col>
+    </ion-row>
+  
+    <div class="img-upload">
+      <p>Upload Photos
+        <ion-icon name="logo-twitter" item-start class="right-icon"></ion-icon>
+      </p>
+  
+      <ion-scroll scrollX="true" style="width: 80vw;
+      height: 70px;
+      margin: auto;">
+        <ion-row nowrap>
+          <img *ngFor="let item of imagesArray" src="assets/imgs/order/upload_image_1.png">
+        </ion-row>
+      </ion-scroll>
+    </div>
+  
+    <button class="done-btn signup-btn" ion-button full (click)="gotoCartPage()">Add Order </button>
+  </ion-content>
