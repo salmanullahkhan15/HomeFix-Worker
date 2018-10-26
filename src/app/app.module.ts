@@ -10,6 +10,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { OrderPage } from '../pages/order/order';
+import { RejectReasonPage } from '../pages/reject-reason/reject-reason';
+import { PaymentSuccessfulPage } from '../pages/payment-successful/payment-successful';
+
+import { ProfilePage } from '../pages/profile/profile';
+import { ContactUsPage } from '../pages/contact-us/contact-us';
+import { PaymentPage } from './../pages/payment/payment';
 
 @NgModule({
   declarations: [
@@ -17,7 +23,12 @@ import { OrderPage } from '../pages/order/order';
     HomePage,
     ListPage,
     LoginPage,
-    OrderPage
+    OrderPage,
+    RejectReasonPage,
+    PaymentSuccessfulPage,
+    ProfilePage,
+    ContactUsPage,
+    PaymentPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +40,12 @@ import { OrderPage } from '../pages/order/order';
     HomePage,
     ListPage,
     LoginPage,
-    OrderPage
+    OrderPage,
+    RejectReasonPage,
+    PaymentSuccessfulPage,
+    ProfilePage,
+    ContactUsPage,
+    PaymentPage
 
   ],
   providers: [

@@ -34,6 +34,11 @@ ion-menu{
     // transform: translateX(255px) !important;
 
 }
+ion-menu.show-menu {
+    // display: block;
+    // width: 60% !important;
+    // background: red;
+}
 .menu-class .menu-head img {
     width: 26%;
     border: 2px solid #f17f37;
@@ -42,7 +47,7 @@ ion-menu{
 
 .menu-class .menu-head {
     text-align: center;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .menu-class .menu-head h2 {
@@ -59,7 +64,7 @@ ion-menu{
 .menu-class ion-list button {
     background: transparent;
     text-align: center;
-    height: 39px;
+    height: 38px;
     min-height: 35px;
     color:#fff;
 }
@@ -69,7 +74,7 @@ ion-menu{
 }
 
 .menu-class ion-list button .item-inner ion-label {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 200;
 }
 
@@ -80,7 +85,7 @@ ion-menu{
 .imageRowMenu{
     width: 100%;
     justify-content: center;
-    height: 30%;
+    height: 20%;
     align-items: flex-end;
 }
 .menu-class {

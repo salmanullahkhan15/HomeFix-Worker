@@ -6,9 +6,14 @@
 -->
 <ion-header class="order-head">
 
-    <img scr="assets/imgs/order/left_arrow.png">
+   
     <!-- <ion-navbar> -->
-    <ion-title>Order Details</ion-title>
+    <ion-title> 
+      <div class="img-div">
+          <img src="assets/imgs/order/left_arrow.png" (click)="gotoHome()">
+          Order Details
+      </div>
+     </ion-title>
     <!-- </ion-navbar> -->
   </ion-header>
   
@@ -28,51 +33,87 @@
       <ion-col col-3 no-padding>
 
         <ion-row class="calender-icon-row">
-            <ion-icon class="mdIcons" ios="ios-calendar" name="md-calendar"></ion-icon>
+          <img  src="assets/imgs/order_detail/calendar.png">
         </ion-row>
         <ion-row class="dateAndTime">
          <span class="dateonly">18 March </span> 2018 <br> 05:00 PM
         </ion-row>
       </ion-col>
-      <ion-col col-6 no-padding>
-        <ion-row class="maintain-service">Maintenence Service</ion-row>
+      <ion-col col-7 no-padding>
+        <ion-row class="maintain-service">Maintenance Service</ion-row>
         <ion-row class="customer-name">Muhammad Faizan Shaikh</ion-row>
         <ion-row class="call-details">
-          <ion-col col-2 no-padding>
-              <ion-icon class="mdIcons" name="md-call"></ion-icon>
+          <ion-col col-1 no-padding>
+              <img  src="assets/imgs/order/cal.png">
           </ion-col>
-          <ion-col class="customer-number" col-10 no-padding>
+          <ion-col class="customer-number" col-11 no-padding>
              (000080) 34555 4555321
             </ion-col>
         </ion-row>
         <ion-row class="call-details">
-            <ion-col col-2 no-padding>
-                <ion-icon class="mdIcons" name="md-globe"></ion-icon>
+            <ion-col col-1 no-padding>
+                <img  src="assets/imgs/order/location.png">
             </ion-col>
-            <ion-col class="customer-number" col-10 no-padding>
+            <ion-col class="customer-number" col-11 no-padding>
               A 345 Suit Business Avenue 
               </ion-col>
           </ion-row>
 
       </ion-col>
-      <ion-col col-3 no-padding>
-
+      <ion-col col-2 no-padding>
+        <ion-row class="map-image-row">
+          <img  src="assets/imgs/order/map-image.png">
+        </ion-row>
       </ion-col>
     </ion-row>
   
-    <div class="img-upload">
-      <p>Upload Photos
-        <ion-icon name="logo-twitter" item-start class="right-icon"></ion-icon>
-      </p>
-  
-      <ion-scroll scrollX="true" style="width: 80vw;
-      height: 70px;
-      margin: auto;">
+    <div class="order-description" *ngIf="service_fee == false">
+      <p class="small-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever since the 1500s, the industry's standard dummy text ever since the 1500s,</p>
+
+      <ion-scroll scrollX="true" style="width: 80vw; height: 70px; margin: auto;">
         <ion-row nowrap>
           <img *ngFor="let item of imagesArray" src="assets/imgs/order/upload_image_1.png">
         </ion-row>
       </ion-scroll>
     </div>
-  
-    <button class="done-btn signup-btn" ion-button full (click)="gotoCartPage()">Add Order </button>
+
+
+
+    <div class="order-description" *ngIf="service_fee == true">
+        <p class="txt-color-service">Serivces Fees</p>
+        <div class="fees-class">
+          <div class="fees-detail">
+            <p class="first-p">Service Fees:</p>
+            <p class="sec-p">$60</p>
+          </div>
+    
+          <div class="fees-detail">
+            <p class="first-p">Spare Parts:</p>
+            <p class="sec-p">$30</p>
+          </div>
+    
+    
+          <div class="fees-detail">
+            <p class="first-p">Extra Fees:</p>
+            <p class="sec-p">$10</ p>
+          </div>
+    
+          <div class="fees-detail total-p">
+              <p class="first-p">Total</p>
+              <p class="sec-p">$10</p>
+            </div>
+        </div>
+      </div>
+
+
+    <ion-row class="buttons-row">
+      <button class="done-btn" ion-button round *ngIf="sendClient == true" (click)="sendtoClient()"><div class="button-text-left">SEND TO CLIENT</div><div class="button-arrow-right"> <img src="assets/imgs/login/right_arrow.png"></div> </button>
+      <button class="done-btn" ion-button round *ngIf="startMain == true && acceptOrder == true" (click)="startMaintainence()"><div class="button-text-left">Start Maintenance</div><div class="button-arrow-right"> <img src="assets/imgs/login/right_arrow.png"></div> </button>
+      <button class="finish-btn" ion-button round *ngIf=" finMain == true" (click)="finishMaintainence()"><div class="button-text-left">Finish Maintenance</div><div class="button-arrow-right"> <img src="assets/imgs/login/right_arrow.png"></div> </button>
+      <button class="reject" ion-button round *ngIf="rejectorder == false && acceptOrder == false" (click)="rejectbutton()">REJECT </button>
+      <button class="accept" ion-button round *ngIf="acceptOrder == false && startMain == false" (click)="acceptButton()">ACCEPT </button>
+      <button class="finish-btn" ion-button round *ngIf=" feePaid == true" (click)="PaidFee()">PAID </button>
+
+    </ion-row>
   </ion-content>

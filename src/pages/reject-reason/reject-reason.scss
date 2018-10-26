@@ -1,0 +1,82 @@
+page-reject-reason {
+
+
+    .rejection-content{
+        background: #414141;
+    }
+    .close-icon{
+        width:100%;
+        align-items: flex-start;
+        justify-content: flex-end;
+        height: 10%;
+    }
+    .close-icon img{
+        height: 1em;
+        width: 1em;
+    }
+    .title{
+        color:#f17f37;
+        text-align: center;
+        justify-content: center;
+        height: 29%;
+        font-size: 20px;
+    }
+    .inputBox{
+        width:100%;
+        height: 46%;
+    }
+    .inputBox ion-textarea{
+        // border:1px solid white;
+        height: 100%;
+        width:80%;
+        border-radius: 10px;
+        margin:auto;
+        background: #696969;
+
+    }
+    .inputBox .text-input{
+        height: 100%;
+        padding: 0px;
+        width: 100%;
+        color:white;
+        font-size: 15px;
+        border-radius: 10px;
+        margin: 0px !important;
+        text-align: center;
+        background: #696969;
+    }
+    .text-input-ios{
+        margin:0px;
+        width:100%;
+    }
+    .buttons-row{
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 22%;
+    }
+    .done-btn{
+        background-color: #a5be42;
+        // border-radius: 150px;
+        font-size: 15px;
+        width: 60%;
+        height: 68%;
+        text-transform: capitalize;
+    }
+}
+
+.rejectClass{
+    .modal-wrapper {
+        z-index: 10;
+        height: 40% !important;
+        width: 75% !important;
+        margin: auto;
+        border-radius: 10px;
+        transform: translateY(70%) !important;
+    }
+    
+}
+.rejectClass{
+    background: rgba(0,0,0,0.92);
+    top:auto;
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 
 /**
@@ -17,7 +17,10 @@ import { HomePage } from '../home/home';
 export class LoginPage {
 
   auth:any ="login";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl:MenuController) {
+    this.menuCtrl.swipeEnable(false,'myMenu')
+
+    this.menuCtrl.enable(false, "myMenu");
   }
 
   gotoHome(){
