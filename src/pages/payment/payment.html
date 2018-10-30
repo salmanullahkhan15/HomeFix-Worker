@@ -2,7 +2,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>PAYMENT METHOD</ion-title>
+    <ion-title> {{ 'PAYMENTMETHOD' | translate }}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -10,10 +10,10 @@
 
 <ion-content padding>
 
-  <div class="pay-txt">PAY WITH CARD OR CASH</div>
+  <div class="pay-txt">  {{ 'PAYWITHCASH' | translate }}</div>
 
   <ion-item class="item-cash">
-      <ion-label>Cash</ion-label>
+      <ion-label> {{ 'CASH' | translate }}</ion-label>
       <ion-toggle checked="false" [(ngModel)]="cash"></ion-toggle>
     </ion-item>
   <div class="pay-form" *ngIf="cash == false">
@@ -21,7 +21,7 @@
 
     <ion-list class="item-country">
       <ion-item>
-        <ion-label>Country</ion-label>
+        <ion-label>{{ 'COUNTRY' | translate }}</ion-label>
         <ion-select [(ngModel)]="gaming">
           <ion-option value="nes">SRI LANKA</ion-option>
           <ion-option value="n64">CHINA</ion-option>
@@ -36,7 +36,7 @@
 
     <ion-list>
       <ion-item>
-        <ion-label fixed>Card Number</ion-label>
+        <ion-label fixed> {{ 'CARDNUM' | translate }}</ion-label>
         <ion-input type="text" value=""></ion-input>
       </ion-item>
     </ion-list>
@@ -45,26 +45,26 @@
 
 
       <ion-item class="item-ex-date">
-        <ion-label>Expiration Date</ion-label>
+        <ion-label> {{ 'EXPIREDATE' | translate }}</ion-label>
         <ion-datetime displayFormat="DD-MM-YY" pickerFormat="DDMMYY"></ion-datetime>
       </ion-item>
 
       <ion-item class="item-cvc">
-        <ion-input type="text" placeholder="CVC"></ion-input>
+        <ion-input type="text" placeholder="{{ 'CVC' | translate }}"></ion-input>
       </ion-item>
     </div>
     <div class="items-name">
       <ion-item class="item-last-name">
-        <ion-input type="text" placeholder="Last Name"></ion-input>
+        <ion-input type="text" placeholder="{{ 'LASTNAME' | translate }}"></ion-input>
       </ion-item>
 
       <ion-item class="item-first-name">
-        <ion-input type="text" placeholder="First Name"></ion-input>
+        <ion-input type="text" placeholder="{{ 'FIRSTNAME' | translate }}"></ion-input>
       </ion-item>
     </div>
 
 
-    <div class="pay-txt tkt-txt">WHAT TICKETS WOULD YOU LIKE?</div>
+    <div class="pay-txt tkt-txt"> {{ 'WHATTICKETSWOULD' | translate }}</div>
   </div>
 
   <div class="pay-method" *ngIf="cash == false">
@@ -93,6 +93,6 @@
 </ion-content>
 <ion-footer>
   <div class="submit-btn" (click)="gotopaymentsucces()">
-    Submit
+     {{ 'SUBMIT' | translate }}
   </div>
 </ion-footer>

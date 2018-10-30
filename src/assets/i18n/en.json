@@ -1,0 +1,64 @@
+{
+    "LOGIN":"Login",
+    "SIGN_UP": "Sign Up",
+    "EMAIL":"Email Address ",
+    "PASSWORD": "Password",
+    "FORGOT":"Forget Password ?",
+    "REMEMBER": "Remember me",
+    "DONE": "Done",
+    "CONFIRMPASSWORD": "Confirm Password",
+    "MOBILE":"Mobile Number",
+    "HOME": "HOME",
+    "HOUSECLEANING": "HOUSE CLEANING",
+    "CARWASH":"Email Address ",
+    "ELECTRICIAN": "ELECTRICIAN",
+    "PLUMBING": "PLUMBING",
+    "PAINTING":"PAINTING",
+    "GARDENING": "GARDENING",
+    "ORDER-DETAIL":"ORDER DETAILS",
+    "GARDENINGSMALL": "Gardening",
+    "ACCEPT":"ACCEPT",
+    "REJECT":"REJECT",
+    "FINMAINTENANCE":"Finish Maintenance",
+    "STRTMAINTENANCE":"Start Maintenance",
+    "SENDTOCLIENT":"SEND TO CLIENT",
+    "PAID":"PAID",
+    "TOTAL":"Total",
+    "EXTRAFEE":"Extra Fees:",
+
+    "SPAREPARTS":"Spare Parts:",
+    "SERVFEES":"Service Fees:",
+    "SERVICESFEE":"Serivces Fees",
+
+    "ORDERDESC":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, the industry's standard dummy text ever since the 1500s",
+    "ADDRESS":" A 345 Suit Business Avenue",
+    "CLIENTNAME":"Muhammad Faizan Shaikhs",
+
+    "MAINSERVICE":"Maintenance Service",
+    "ORDERNUM":"Your Order No.",
+    "REASONTITLE":" Please Enter Rejection Reason",
+    "SAVE":"Save",
+
+
+    "PAYMENTORDERNUM":" Payment to Order No.",
+    "Client":"Client",
+    "SUCCESSFULLY":"SUCCESSFULLY",
+    "PAYMENTMETHOD":"PAYMENT METHOD",
+    "PAYWITHCASH":"PAY WITH CARD OR CASH",
+    "CASH":"Cash",
+    "COUNTRY":"COUNTRY",
+    "WHATTICKETSWOULD":"WHAT TICKETS WOULD YOU LIKE?",
+    "FIRSTNAME":"First Name ",
+    "LASTNAME":"Last Name ",
+    "CVC":"CVC",
+    "EXPIREDATE":"Expiration Date",
+    "CARDNUM":"Card Number",
+    "SUBMIT":"Submit",
+
+    "CLIENTCITY":"Ryadh"
+
+
+   
+
+
+}

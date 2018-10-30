@@ -10,6 +10,7 @@ import { OrderPage } from '../pages/order/order';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { ProfilePage } from '../pages/profile/profile';
 import { PaymentPage } from '../pages/payment/payment';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   templateUrl: 'app.html'
@@ -21,9 +22,11 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,translate: TranslateService) {
     this.initializeApp();
 
+    translate.setDefaultLang('en');
+    
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },

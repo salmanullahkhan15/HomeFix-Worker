@@ -1,20 +1,15 @@
-<!--
-  Generated template for the OrderPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header class="order-head">
 
    
-    <!-- <ion-navbar> -->
+   
     <ion-title> 
       <div class="img-div">
           <img src="assets/imgs/order/left_arrow.png" (click)="gotoHome()">
-          Order Details
+          {{ 'ORDER-DETAIL' | translate}}
       </div>
      </ion-title>
-    <!-- </ion-navbar> -->
+   
   </ion-header>
   
   
@@ -23,9 +18,9 @@
   
     <div class="head-cont">
       <img src="assets/imgs/order/gardening_service_icon.png">
-      <h1>Gardening</h1>
-      <p>Your Order No.
-        <span>456789</span>
+      <h1>  {{ 'GARDENINGSMALL' | translate}}</h1>
+      <p>{{ 'ORDERNUM' | translate}}
+        <span>456789 </span>
       </p>
     </div>
   
@@ -40,8 +35,8 @@
         </ion-row>
       </ion-col>
       <ion-col col-7 no-padding>
-        <ion-row class="maintain-service">Maintenance Service</ion-row>
-        <ion-row class="customer-name">Muhammad Faizan Shaikh</ion-row>
+        <ion-row class="maintain-service"> {{ 'MAINSERVICE' | translate}}</ion-row>
+        <ion-row class="customer-name">{{ 'CLIENTNAME' | translate}}</ion-row>
         <ion-row class="call-details">
           <ion-col col-1 no-padding>
               <img  src="assets/imgs/order/cal.png">
@@ -55,7 +50,7 @@
                 <img  src="assets/imgs/order/location.png">
             </ion-col>
             <ion-col class="customer-number" col-11 no-padding>
-              A 345 Suit Business Avenue 
+              {{ 'ADDRESS' | translate}}
               </ion-col>
           </ion-row>
 
@@ -68,8 +63,8 @@
     </ion-row>
   
     <div class="order-description" *ngIf="service_fee == false">
-      <p class="small-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-        dummy text ever since the 1500s, the industry's standard dummy text ever since the 1500s,</p>
+      <p class="small-txt">{{ 'ORDERDESC' | translate}}
+        ,</p>
 
       <ion-scroll scrollX="true" style="width: 80vw; height: 70px; margin: auto;">
         <ion-row nowrap>
@@ -81,39 +76,39 @@
 
 
     <div class="order-description" *ngIf="service_fee == true">
-        <p class="txt-color-service">Serivces Fees</p>
+        <p class="txt-color-service"> {{ 'SERVICESFEE' | translate}}</p>
         <div class="fees-class">
           <div class="fees-detail">
-            <p class="first-p">Service Fees:</p>
+            <p class="first-p"> {{ 'SERVFEES' | translate}}</p>
             <p class="sec-p">$60</p>
           </div>
     
           <div class="fees-detail">
-            <p class="first-p">Spare Parts:</p>
+            <p class="first-p"> {{ 'SPAREPARTS' | translate}}</p>
             <p class="sec-p">$30</p>
           </div>
     
     
           <div class="fees-detail">
-            <p class="first-p">Extra Fees:</p>
-            <p class="sec-p">$10</ p>
+            <p class="first-p"> {{ 'EXTRAFEE' | translate}}</p>
+            <p class="sec-p">$10 </p>
           </div>
     
           <div class="fees-detail total-p">
-              <p class="first-p">Total</p>
+              <p class="first-p"> {{ 'TOTAL' | translate}}</p>
               <p class="sec-p">$10</p>
             </div>
         </div>
-      </div>
+    </div>
 
 
     <ion-row class="buttons-row">
-      <button class="done-btn" ion-button round *ngIf="sendClient == true" (click)="sendtoClient()"><div class="button-text-left">SEND TO CLIENT</div><div class="button-arrow-right"> <img src="assets/imgs/login/right_arrow.png"></div> </button>
-      <button class="done-btn" ion-button round *ngIf="startMain == true && acceptOrder == true" (click)="startMaintainence()"><div class="button-text-left">Start Maintenance</div><div class="button-arrow-right"> <img src="assets/imgs/login/right_arrow.png"></div> </button>
-      <button class="finish-btn" ion-button round *ngIf=" finMain == true" (click)="finishMaintainence()"><div class="button-text-left">Finish Maintenance</div><div class="button-arrow-right"> <img src="assets/imgs/login/right_arrow.png"></div> </button>
-      <button class="reject" ion-button round *ngIf="rejectorder == false && acceptOrder == false" (click)="rejectbutton()">REJECT </button>
-      <button class="accept" ion-button round *ngIf="acceptOrder == false && startMain == false" (click)="acceptButton()">ACCEPT </button>
-      <button class="finish-btn" ion-button round *ngIf=" feePaid == true" (click)="PaidFee()">PAID </button>
+      <button class="done-btn" ion-button round *ngIf="sendClient == true" (click)="sendtoClient()"><div class="button-text-left"> {{ 'SENDTOCLIENT' | translate}}</div><div class="button-arrow-right"> <img src="assets/imgs/login/right_arrow.png"></div> </button>
+      <button class="done-btn" ion-button round *ngIf="startMain == true && acceptOrder == true" (click)="startMaintainence()"><div class="button-text-left"> {{ 'STRTMAINTENANCE' | translate}}</div><div class="button-arrow-right"> <img src="assets/imgs/login/right_arrow.png"></div> </button>
+      <button class="finish-btn" ion-button round *ngIf=" finMain == true" (click)="finishMaintainence()"><div class="button-text-left"> {{ 'FINMAINTENANCE' | translate}}</div><div class="button-arrow-right"> <img src="assets/imgs/login/right_arrow.png"></div> </button>
+      <button class="reject" ion-button round *ngIf="rejectorder == false && acceptOrder == false" (click)="rejectbutton()"> {{ 'REJECT' | translate}}</button>
+      <button class="accept" ion-button round *ngIf="acceptOrder == false && startMain == false" (click)="acceptButton()"> {{ 'ACCEPT' | translate}}</button>
+      <button class="finish-btn" ion-button round *ngIf=" feePaid == true" (click)="PaidFee()"> {{ 'PAID' | translate }} </button>
 
     </ion-row>
   </ion-content>

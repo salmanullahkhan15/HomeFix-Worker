@@ -8,8 +8,8 @@
   <ion-content class="bg_img">
     <div class="menu-head">
       <img src="assets/imgs/menu/profile-img.png" />
-      <h2>Alaa Eldin Bashir</h2>
-      <p>Riyadh</p>
+      <h2> {{ 'CLIENTNAME' | translate }}</h2>
+      <p>Riyadh {{ 'CLIENTCITY' | translate }}</p>
     </div>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">

@@ -6,14 +6,14 @@
   <ion-row class="close-icon">
     <img src="assets/imgs/order/cross_icon.png" (click)="dismiss()">
   </ion-row>
-  <ion-row class="title">
-    Please Enter Rejection Reason
+  <ion-row class="title"> {{ 'REASONTITLE' | translate}}
+   
   </ion-row>
   <ion-row class="inputBox">
     <ion-textarea [(ngModel)]="msg"></ion-textarea>
   </ion-row>
 
   <ion-row class="buttons-row">
-      <button class="done-btn" ion-button round (click)="save()">Save </button>
+      <button class="done-btn" ion-button round (click)="save()"> {{ 'SAVE' | translate}}</button>
   </ion-row>
 </ion-content>

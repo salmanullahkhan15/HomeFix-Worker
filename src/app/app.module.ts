@@ -16,7 +16,14 @@ import { PaymentSuccessfulPage } from '../pages/payment-successful/payment-succe
 import { ProfilePage } from '../pages/profile/profile';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { PaymentPage } from './../pages/payment/payment';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpModule, Http } from '@angular/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 @NgModule({
   declarations: [
     MyApp,
@@ -32,7 +39,15 @@ import { PaymentPage } from './../pages/payment/payment';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
